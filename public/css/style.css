@@ -239,7 +239,7 @@ html, body {
 .hero .col-md-6:last-child {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 10%;
 }
 
 .hero h1 {
@@ -256,7 +256,7 @@ html, body {
 } 
 
 .hero img {
-    height: 600px;
+    height: 500px;
 }
 
 /* SITEMAIN
@@ -289,31 +289,103 @@ html, body {
 
 /* Section: Skills */
 .section-skills {
-    padding-bottom: 120px;
+    padding-bottom: 20px;
 }
 
-.skill + .skill {
+.phone  {
+    text-align: center;
+    position: relative;
+    font-size: 24px;
+    text-transform: uppercase;
+
+}
+
+
+.phone + .phone {
     margin-top: 50px;
 }
 
-.skill h4 {
-    font-size: 24px;
-    text-transform: uppercase;
+.phone-info h4 {
+    text-align: start;
     margin: 0 0 15px;
 }
 
-.progress {
-    height: 15px;
+
+.section-skills .col-md-4:nth-last-child(-n+3) .phone {
     margin-bottom: 0;
-    border-radius: 0;
-    background-color: #dfdfdf;
-    box-shadow: none;
 }
 
-.progress-bar {
-    background-color: #212121;  
+
+
+.phone img{
+    width: 220px;
+    height: auto;
 }
 
+.phone:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    -o-transition: background-color 0.25s ease-in-out;
+    -ms-transition: background-color 0.25s ease-in-out;
+
+}
+
+.phone:hover:before{
+    background-color: rgba(92, 92, 92, 0.6);
+}
+
+.phone-info {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+}
+
+
+.phone:hover .phone-info {
+    left: 50px;
+    opacity: 1;
+}
+
+
+.phone-info ul {
+    padding: 6px 7px 4px;
+    font-size: 20px;
+    
+    color: #fff;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+
+.phone-info ul li:not(:last-child) { 
+    margin-bottom: 10px;  
+ }
+
+.phone-info ul {
+    z-index: 9999;
+}
+
+.phone-footer {
+    margin: 50px 0;
+}
 /* Section: Services */
 .section-services {
     position: relative;
@@ -322,7 +394,7 @@ html, body {
 
 .section-services:before {
     content: '';
-    background: url(../img/services-bg.jpg) no-repeat fixed center / cover;
+    background: url(../img/iphonefixing.jpg) no-repeat fixed center / cover;
     width: 100%;
     height: 400px; 
     position: absolute;
@@ -341,150 +413,26 @@ html, body {
     z-index: 0;
 }
 
-.section-services .container {
-    padding: 120px 100px;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.service h4 {
-    margin: 25px 0;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.service p {
-    color: #000;
-    margin-bottom: 0;
-}
 
 /* Section: Portfolio */
 .section-portfolio {
+    padding-top: 20%;
     padding-bottom: 120px;
 }
 
-.portfolio-item {
-    height: 280px;
-    margin-bottom: 30px;
-    position: relative;
-}
 
-.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-    margin-bottom: 0;
-}
-
-.portfolio-item:before {
-    content: '';
-    height: 100%;
+.portfolio-video  {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.25s ease-in-out;
-    -moz-transition: background-color 0.25s ease-in-out;
-    -webkit-transition: background-color 0.25s ease-in-out;
-    -o-transition: background-color 0.25s ease-in-out;
-    -ms-transition: background-color 0.25s ease-in-out;
-}
-
-.portfolio-item:hover:before{
-    background-color: rgba(33,33,33,0.6);
-}
-
-.portfolio-item-info {
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-}
-
-.portfolio-item:hover .portfolio-item-info {
-    left: 50px;
-    opacity: 1;
-}
-
-.portfolio-item-info h4 {
-    margin: 0 0 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.portfolio-item-info a {
-    padding: 6px 7px 4px;
-    font-size: 12px;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    color: #fff;
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-}
-
-.portfolio-item-info a:hover {
-    color: #212121;
-    background-color: #fff;
-}
-
-.section-portfolio .btn {
-    margin-top: 10px;
-}
-
-/* Modal */
-.modal {
-    z-index: 9999;
-}
-
-.modal-content {
-    border-radius: 0;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-header {
-    position: relative;
-    padding: 0;
     height: 500px;
 }
-
-.modal-header .close {
-    position: absolute;
-    right: 0;
-    padding: 10px 11px;
-    margin-top: 0;
-    background-color: #fff;
-    font-size: 16px;
-    color: #212121;
-    border-left: 1px solid #212121;
-    border-bottom: 1px solid #212121;
-    opacity: 1;
-    transition: box-shadow 0.25s ease-in-out;
-    -moz-transition: box-shadow 0.25s ease-in-out;
-    -webkit-transition: box-shadow 0.25s ease-in-out;
-    -o-transition: box-shadow 0.25s ease-in-out;
-    -ms-transition: box-shadow 0.25s ease-in-out;
+.portfolio-video iframe {
+    width: 100%;
+    height: 100%;
 }
 
-.modal-header .close:hover {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-}
 
-.modal-body h4 {
-    font-weight: 700;
-}
 
-.modal-footer {
-    text-align: center;
-}
+
 
 /* Section: Counters */
 .section-counters {

@@ -5,7 +5,8 @@ const path = require('path');
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname,'/index.html'))
+  res.status(404).send("Sorry this domain isn't ready yet!")
+  //res.sendFile(path.join(__dirname,'/index.html'))
 })
 
 app.listen(process.env.PORT || port, () => {
