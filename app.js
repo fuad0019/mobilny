@@ -7,7 +7,10 @@ const backend_url = 'https://mobilny-backend.herokuapp.com'
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+  res.statusCode = 404
+  res.send('Site is not ready')
 
+  /*
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones');
@@ -23,10 +26,14 @@ app.get('/', (req, res) => {
       console.error(err);
     }
   })();
+  */
 })
 
 
 app.get('/:phone/models', (req, res) => {
+  res.statusCode = 404
+  res.send('Site is not ready')
+  /*
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones/'+req.params.phone + '/models');
@@ -42,10 +49,14 @@ app.get('/:phone/models', (req, res) => {
       console.error(err);
     }
   })();
+  */
 })
 
 
 app.get('/:phone/models/:model', (req, res) => {
+  res.statusCode = 404
+  res.send('Site is not ready')
+  /*
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones/'+req.params.phone+ '/models/'+ req.params.model);
@@ -63,15 +74,21 @@ app.get('/:phone/models/:model', (req, res) => {
       console.error(err);
     }
   })();
+  */
 })
 
 
 app.get('/kontakt', (req, res) => {
-  res.render('Kontakt')
+  res.statusCode = 404
+  res.send('Site is not ready')  
+
+  //res.render('Kontakt')
 })
 
 app.get('/om', (req, res) => {
-  res.render('om')
+  res.statusCode = 404
+  res.send('Site is not ready')
+  //res.render('om')
 })
 
 
