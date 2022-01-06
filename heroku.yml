@@ -8,3 +8,6 @@ build:
 run: 
   mobilnyfrontend: npm run start
   mobilnybackend: npm run start
+release:
+  image: mobilnyfrontend
+  image: mobilnybackend
