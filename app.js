@@ -7,8 +7,7 @@ const backend_url = 'https://mobilny-backend.herokuapp.com'
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.statusCode = 404
-  res.send('Site is not ready')
+  res.status(404).send("Sorry this domain isn't ready yet!")
 
   /*
   (async () => {
@@ -31,8 +30,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/:phone/models', (req, res) => {
-  res.statusCode = 404
-  res.send('Site is not ready')
+  res.status(404).send("Sorry this domain isn't ready yet!")
   /*
   (async () => {
     try {
@@ -54,8 +52,7 @@ app.get('/:phone/models', (req, res) => {
 
 
 app.get('/:phone/models/:model', (req, res) => {
-  res.statusCode = 404
-  res.send('Site is not ready')
+  res.status(404).send("Sorry this domain isn't ready yet!")
   /*
   (async () => {
     try {
@@ -79,8 +76,7 @@ app.get('/:phone/models/:model', (req, res) => {
 
 
 app.get('/kontakt', (req, res) => {
-  res.statusCode = 404
-  res.send('Site is not ready')  
+  res.status(404).send("Sorry this domain isn't ready yet!")
 
   //res.render('Kontakt')
 })
