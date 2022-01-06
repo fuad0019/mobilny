@@ -4,6 +4,7 @@ const fetch = require('cross-fetch');
 const app = express()
 const path = require('path');
 const port = process.env.PORT || 3000
+const backend_url = 'https://mobilny-backend.herokuapp.com'
 
 app.set('view engine', 'ejs');
 
@@ -11,10 +12,10 @@ app.get('/', (req, res) => {
 
   (async () => {
     try {
-      let data = await fetch('http://mobilnybackend:3000/phones');
+      let data = await fetch(backend_url+'/phones');
       
       if (data.status >= 400) {
-        throw new Error("Bad response from server");
+        throw new Error("Bad response from the server");
       }
       
       let phones = await data.json();
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
 app.get('/:phone/models', (req, res) => {
   (async () => {
     try {
-      let data = await fetch('http://mobilnybackend:3000/phones/'+req.params.phone + '/models');
+      let data = await fetch(backend_url+'/phones/'+req.params.phone + '/models');
       
       if (data.status >= 400) {
         throw new Error("Bad response from server");
@@ -49,7 +50,7 @@ app.get('/:phone/models', (req, res) => {
 app.get('/:phone/models/:model', (req, res) => {
   (async () => {
     try {
-      let data = await fetch('http://mobilnybackend:3000/phones/'+req.params.phone+ '/models/'+ req.params.model);
+      let data = await fetch(backend_url+'/phones/'+req.params.phone+ '/models/'+ req.params.model);
       
       if (data.status >= 400) {
         throw new Error("Bad response from server");
