@@ -10,4 +10,6 @@ run:
   mobilnybackend: npm run start
 release:
   image: mobilnyfrontend
+  command: npm run start
   image: mobilnybackend
+  command: npm run start

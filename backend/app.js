@@ -9,7 +9,7 @@ const app = express()
 const path = require('path');
 
 Iphoneparts = [
-  { "name": "backglass", "price": "400", "img": "/images/parts/backscreen.png" },
+  { "name": "backglasss", "price": "400", "img": "/images/parts/backscreen.png" },
   { "name": "frontscreen", "price": "700", "img": "/images/parts/frontscreen.png" },
   { "name": "speaker", "price": "200" },
   { "name": "microphone", "price": "200" }
