@@ -1,8 +1,6 @@
 const express = require('express');
-const { dirname } = require('path');
 const fetch = require('cross-fetch');
 const app = express()
-const path = require('path');
 const port = process.env.PORT || 3000
 const backend_url = 'https://mobilny-backend.herokuapp.com'
 
