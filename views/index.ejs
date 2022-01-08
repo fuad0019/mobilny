@@ -16,7 +16,7 @@
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
-
+  <script src="https://kit.fontawesome.com/7bc2258996.js" crossorigin="anonymous"></script>
 
   <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -43,24 +43,29 @@
     <div class="u-clearfix u-sheet u-sheet-1">
       <a href="/" class="u-image u-logo u-image-1" data-image-width="475" data-image-height="291">
         <img src="/images/website/logo.png" class="u-logo-image u-logo-image-1">
-      </a>
+      </a>"
       <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
         <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-            href="#">
-            <svg viewBox="0 0 24 24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
-            </svg>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
-                  <rect y="1" width="16" height="2"></rect>
-                  <rect y="7" width="16" height="2"></rect>
-                  <rect y="13" width="16" height="2"></rect>
-                </symbol>
-              </defs>
-            </svg>
-          </a>
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item">
+              <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="#">
+                <svg viewBox="0 0 24 24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+                </svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                      <rect y="1" width="16" height="2"></rect>
+                      <rect y="7" width="16" height="2"></rect>
+                      <rect y="13" width="16" height="2"></rect>
+                    </symbol>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="u-nav-item"><i class="fas fa-shopping-cart u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base"></i></li>
+          </ul>
         </div>
         <div class="u-custom-menu u-nav-container">
           <ul class="u-nav u-unstyled u-nav-1">
@@ -72,10 +77,13 @@
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base"
                 href="/kontakt" style="padding: 10px 20px;">Kontakt</a>
             </li>
-            <li class="u-nav-item"><a
-                href="om"
+            <li class="u-nav-item"><a href="om"
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base"
                 style="padding: 10px 20px;">Om</a>
+            </li>
+            <li class="u-nav-item">
+              <i
+                class="fas fa-shopping-cart u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base"></i>
             </li>
           </ul>
         </div>
@@ -95,12 +103,13 @@
             </div>
           </div>
           <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+
         </div>
       </nav>
     </div>
   </header>
-  <section class="u-clearfix u-image u-shading u-typography-Normal--Introduction u-section-1" src="/images/website/iphonefixing.jpg" id="carousel_0a06"
-    data-image-width="700" data-image-height="500">
+  <section class="u-clearfix u-image u-shading u-typography-Normal--Introduction u-section-1"
+    src="/images/website/iphonefixing.jpg" id="carousel_0a06" data-image-width="700" data-image-height="500">
     <div class="u-clearfix u-sheet u-sheet-1">
       <div
         class="u-align-left u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-group u-similar-fill u-group-1">
@@ -124,29 +133,31 @@
       <div
         class="u-align-center u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-products u-products-1">
         <div class="u-repeater u-repeater-1">
-          <% for(let i = 0; i < phones.length; i++) { %>
-          <!--product_item-->
-          <div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-1">
-            <div class="u-container-layout u-similar-container u-container-layout-1">
-              <h3 class="u-text u-text-1"> <%-phones[i].phone_name%></h3>
-              <!--product_image-->
-              <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1"
-                src="<%-phones[0].image_path%>" data-image-width="427" data-image-height="429">
-              <!--/product_image-->
-              <!--product_button-->
-              <!--options_json-->
-              <!--{"clickType":"go-to-page","content":"vælg&nbsp;"}-->
-              <!--/options_json-->
-              <a href="/<%-phones[i].phone_name%>/models"
-                class="u-border-2 u-border-grey-25 u-btn u-btn-round u-button-style u-hover-feature u-none u-product-control u-radius-9 u-text-body-color u-btn-1">
-                <!--product_button_content-->vælg&nbsp;
-                <!--/product_button_content-->
-              </a>
-              <!--/product_button-->
+          <% for(let i=0; i < phones.length; i++) { %>
+            <!--product_item-->
+            <div class="u-align-center u-container-style u-products-item u-repeater-item u-white u-repeater-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h3 class="u-text u-text-1">
+                  <%-phones[i].phone_name%>
+                </h3>
+                <!--product_image-->
+                <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1"
+                  src="<%-phones[0].image_path%>" data-image-width="427" data-image-height="429">
+                <!--/product_image-->
+                <!--product_button-->
+                <!--options_json-->
+                <!--{"clickType":"go-to-page","content":"vælg&nbsp;"}-->
+                <!--/options_json-->
+                <a href="/<%-phones[i].phone_name%>/models"
+                  class="u-border-2 u-border-grey-25 u-btn u-btn-round u-button-style u-hover-feature u-none u-product-control u-radius-9 u-text-body-color u-btn-1">
+                  <!--product_button_content-->vælg&nbsp;
+                  <!--/product_button_content-->
+                </a>
+                <!--/product_button-->
+              </div>
             </div>
-          </div>
-          <% } %>
-          
+            <% } %>
+
         </div>
       </div>
       <!--/products-->
