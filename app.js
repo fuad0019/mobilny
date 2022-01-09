@@ -7,9 +7,9 @@ const backend_url = 'https://mobilny-backend.herokuapp.com'
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  //res.status(404).send("Sorry this domain isn't ready yet!")
+  res.status(404).send("Sorry this domain isn't ready yet!")
 
-  
+ /* 
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones');
@@ -25,13 +25,14 @@ app.get('/', (req, res) => {
       console.error(err);
     }
   })();
+  */
   
 })
 
 
 app.get('/:phone/models', (req, res) => {
-  //res.status(404).send("Sorry this domain isn't ready yet!")
-  
+  res.status(404).send("Sorry this domain isn't ready yet!")
+  /*
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones/'+req.params.phone + '/models');
@@ -55,13 +56,14 @@ app.get('/:phone/models', (req, res) => {
       console.error(err);
     }
   })();
+  */
   
 })
 
 
 app.get('/:phone/models/:model', (req, res) => {
-  //res.status(404).send("Sorry this domain isn't ready yet!")
-  
+  res.status(404).send("Sorry this domain isn't ready yet!")
+  /*
   (async () => {
     try {
       let data = await fetch(backend_url+'/phones/'+req.params.phone+ '/models/'+ req.params.model);
@@ -84,19 +86,19 @@ app.get('/:phone/models/:model', (req, res) => {
       console.error(err);
     }
   })();
-  
+  */
 })
 
 
 app.get('/kontakt', (req, res) => {
-  //res.status(404).send("Sorry this domain isn't ready yet!")
+  res.status(404).send("Sorry this domain isn't ready yet!")
 
-  res.render('Kontakt')
+  //res.render('Kontakt')
 })
 
 app.get('/om', (req, res) => {
-  //res.status(404).send("Sorry this domain isn't ready yet!")
-  res.render('om')
+  res.status(404).send("Sorry this domain isn't ready yet!")
+  //res.render('om')
 })
 
 
